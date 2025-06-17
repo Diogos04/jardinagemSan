@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardinagem</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Gerenciador de Orçamentos</h2>
+
+        <div class="formulario">
+            <input type="hidden" id="indexEditar">
+            <input class="inpute" type="text" id="nome" placeholder="Nome do Cliente" required>
+            <input class="inpute" type="number" id="areaTerreno" placeholder="Área do Terreno(em m²)" required>
+            <select name="tipoServico" id="tipoServico">
+                <option value="Poda">Poda</option>
+                <option value="Plantio">Plantio</option>
+                <option value="Manutenção Completa">Manutenção Completa</option>
+            </select><br>
+            <p>Deseja manutenção mensal?</p>
+            <input type="radio" name="opcaoMensal" id="sim" value="Sim" checked>
+            <label for="sim">Sim</label><br>
+            <input type="radio" name="opcaoMensal" id="nao" value="Não">
+            <label for="nao">Não</label><br>
+            <button class="btnSalvar" id="btnSalvar">Salvar Orçamento</button>
+
+            <div class="tabela_orcamentos">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo de Serviço</th>
+                            <th>Área</th>
+                            <th>Manutenção Mensal</th>
+                            <th>Total Estimado</th>
+                            <th>Opção</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaOrcamentos"></tbody>
+                </table>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
